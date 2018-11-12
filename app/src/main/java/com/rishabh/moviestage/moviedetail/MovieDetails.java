@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NavUtils;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.graphics.Palette;
@@ -37,6 +38,7 @@ import com.rishabh.moviestage.data.DataManager;
 import com.rishabh.moviestage.data.database.viewmodel.AddMoviesViewModel;
 import com.rishabh.moviestage.data.database.viewmodel.AddMoviesViewModelFactory;
 import com.rishabh.moviestage.data.database.viewmodel.MainViewModel;
+import com.rishabh.moviestage.movielist.MovieListActivity;
 import com.rishabh.moviestage.pojo.Result;
 import com.rishabh.moviestage.utils.AppContants;
 
@@ -299,7 +301,7 @@ public class MovieDetails extends BaseActivity implements MovieDetailView, Trail
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                NavUtils.navigateUpFromSameTask(this);
                 return true;
 
             default:

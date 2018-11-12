@@ -99,4 +99,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         MovieViewHolder viewHolder = new MovieViewHolder(view);
         return viewHolder;
     }
+
+    public List<Result> getMovieList() {
+        return movieList;
+    }
 }

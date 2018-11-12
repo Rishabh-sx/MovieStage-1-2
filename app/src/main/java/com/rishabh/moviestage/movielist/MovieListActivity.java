@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
@@ -23,6 +24,7 @@ import com.rishabh.moviestage.moviedetail.MovieDetails;
 import com.rishabh.moviestage.pojo.MovieResponse;
 import com.rishabh.moviestage.pojo.Result;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -51,10 +53,17 @@ public class MovieListActivity extends BaseActivity implements MovieListView, Mo
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
         setUpAdapter();
-        setupViewModel();
-        filteredby = "popular";
         presenter = new MovieListPresenter(this);
-        presenter.getMovies(filteredby);
+        setupViewModel();
+
+        if(savedInstanceState==null || savedInstanceState.getParcelableArrayList("list")==null){
+            filteredby = "popular";
+            presenter.getMovies(filteredby);
+            Log.e(TAG, "onCreate");
+        }else{
+            filteredby = savedInstanceState.getString("filter_by");
+            Log.e(TAG, "savedInstance");
+        }
     }
 
     private void setupViewModel() {
@@ -157,5 +166,12 @@ public class MovieListActivity extends BaseActivity implements MovieListView, Mo
         });
         builder.show();
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("list",(ArrayList<? extends Parcelable>) moviesAdapter.getMovieList());
+        outState.putString("filter_by",filteredby);
     }
 }
