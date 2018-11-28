@@ -14,7 +14,8 @@ App utilizes stable release versions of all libraries, Gradle, and Android Studi
 ```
 ## User Interface - Layout
 ```
-MEETS SPECIFICATIONS
+###### MEETS SPECIFICATIONS
+
 UI contains an element (e.g., a spinner or settings menu) to toggle the sort order of the movies by:
 most popular, highest rated.
 
@@ -28,7 +29,8 @@ Movie Details layout contains a section for displaying trailer videos and user r
 ```
 ## User Interface - Function
 ```
-MEETS SPECIFICATIONS
+###### MEETS SPECIFICATIONS
+
 When a user changes the sort criteria (most popular, highest rated, and favorites) the main view gets
 updated correctly.
 
@@ -41,7 +43,8 @@ Tap the button on a favorite movie will unfavorite it.
 ```
 ## Network API Implementation
 ```
-MEETS SPECIFICATIONS
+###### MEETS SPECIFICATIONS
+
 In a background thread, app queries the /movie/popular or /movie/top_rated API for the sort criteria
 specified in the settings menu.
 
@@ -53,7 +56,8 @@ thread and displays those details when the user selects a movie.
 ```
 ## Data Persistence
 ```
-MEETS SPECIFICATIONS
+###### MEETS SPECIFICATIONS
+
 The titles and IDs of the user’s favorite movies are stored in a native SQLite database and exposed via
 a ContentProvider
 OR
@@ -66,7 +70,8 @@ on movie ids stored in the database.
 ```
 ## Android Architecture Components
 ```
-MEETS SPECIFICATIONS
+###### MEETS SPECIFICATIONS
+
 If Room is used, database is not re-queried unnecessarily. LiveData is used to observe changes in the database
 and update the UI accordingly.
 
