@@ -4,8 +4,10 @@
 
 
 ## Common Project Requirements
+
+###### MEETS SPECIFICATIONS
+
 ```
-MEETS SPECIFICATIONS
 App is written solely in the Java Programming Language.
 
 App conforms to common standards found in the Android Nanodegree General Project Guidelines.
@@ -13,9 +15,10 @@ App conforms to common standards found in the Android Nanodegree General Project
 App utilizes stable release versions of all libraries, Gradle, and Android Studio.
 ```
 ## User Interface - Layout
-```
+
 ###### MEETS SPECIFICATIONS
 
+```
 UI contains an element (e.g., a spinner or settings menu) to toggle the sort order of the movies by:
 most popular, highest rated.
 
@@ -28,9 +31,10 @@ Movie Details layout contains title, release date, movie poster, vote average, a
 Movie Details layout contains a section for displaying trailer videos and user reviews.
 ```
 ## User Interface - Function
-```
+
 ###### MEETS SPECIFICATIONS
 
+```
 When a user changes the sort criteria (most popular, highest rated, and favorites) the main view gets
 updated correctly.
 
@@ -42,9 +46,10 @@ In the movies detail screen, a user can tap a button (for example, a star) to ma
 Tap the button on a favorite movie will unfavorite it.
 ```
 ## Network API Implementation
-```
+
 ###### MEETS SPECIFICATIONS
 
+```
 In a background thread, app queries the /movie/popular or /movie/top_rated API for the sort criteria
 specified in the settings menu.
 
@@ -55,9 +60,10 @@ App requests for user reviews for a selected movie via the /movie/{id}/reviews e
 thread and displays those details when the user selects a movie.
 ```
 ## Data Persistence
-```
+
 ###### MEETS SPECIFICATIONS
 
+```
 The titles and IDs of the user’s favorite movies are stored in a native SQLite database and exposed via
 a ContentProvider
 OR
@@ -69,9 +75,10 @@ When the "favorites" setting option is selected, the main view displays the enti
 on movie ids stored in the database.
 ```
 ## Android Architecture Components
-```
+
 ###### MEETS SPECIFICATIONS
 
+```
 If Room is used, database is not re-queried unnecessarily. LiveData is used to observe changes in the database
 and update the UI accordingly.
 
