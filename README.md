@@ -2,7 +2,7 @@
 
 **This applicaiton is part of Udacity - Android Developer Nanodegree and based on Udacity's Project Rubric shared below:**
 
-
+```
 Common Project Requirements
 
 MEETS SPECIFICATIONS
@@ -62,3 +62,4 @@ MEETS SPECIFICATIONS
 If Room is used, database is not re-queried unnecessarily. LiveData is used to observe changes in the database and update the UI accordingly.
 
 If Room is used, database is not re-queried unnecessarily after rotation. Cached LiveData from ViewModel is used instead.
+```
