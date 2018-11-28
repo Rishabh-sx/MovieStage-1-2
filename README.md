@@ -1,4 +1,4 @@
-# MovieStage1and2 
+# MovieStage 1 and 2 
 
 **This application is part of Udacity - Android Developer Nanodegree and based on Udacity's Project Rubric shared below:**
 
